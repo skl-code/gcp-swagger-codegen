@@ -1,0 +1,7 @@
+# NedapOnsApi.DossierRestrictiveMeasureCarePlanEntryReason
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** | The reason&#x27;s ID. | [optional] 
+**tag** | **String** | The reason description and their Dutch translation. New values since the March 2022-release: &lt;ul&gt; &lt;li&gt;irresponsible_postpone: het niet langer verantwoord is voor u of uw omgeving om verplichte zorg uit te stellen&lt;/li&gt; &lt;li&gt;location_safety_client_others: zonder deze zorg de plek waar u nu verblijft niet meer veilig is voor u of voor anderen&lt;/li&gt; &lt;li&gt;rights_freedoms_others: zonder deze zorg andere mensen hun rechten en vrijheden kwijtraken&lt;/li&gt; &lt;li&gt;possible_offenses: zonder deze zorg u mogelijk strafbare feiten zult plegen&lt;/li&gt; &lt;/ul&gt;  Older values: &lt;ul&gt; &lt;li&gt;prevent_crisis: een crisissituatie voorkomen&lt;/li&gt; &lt;li&gt;prevent_detriment: een ernstig nadeel voorkomen&lt;/li&gt; &lt;li&gt;stabilize_general: de geestelijke gezondheid stabiliseren&lt;/li&gt; &lt;li&gt;stabilize_decision_making: de geestelijke gezondheid zo te herstellen dat de client weer (zoveel mogelijk) zelf kan bepalen wat te doen&lt;/li&gt; &lt;li&gt;stabilize_physical_health: het stabiliseren of verbeteren van de lichamelijke gezondheid (indien het gedrag als gevolg van de psychische stoornis leidt tot ernstig nadeel)&lt;/li&gt; &lt;/ul&gt; | [optional] 

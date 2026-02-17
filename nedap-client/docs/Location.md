@@ -1,0 +1,30 @@
+# NedapOnsApi.Location
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** |  | [optional] 
+**beginDate** | **Date** |  | [optional] 
+**endDate** | **Date** |  | [optional] 
+**identificationNo** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**agbCode** | **String** | Deprecated since: 14-03-2019 - nationally issued unique identifying code for organisations and persons that have a registration in the agb register | [optional] 
+**agbcodeId** | **Number** |  | [optional] 
+**materializedPath** | **String** | automatically calculated field | [optional] 
+**wzaCode** | **String** | unique identifying code. Used by municipalities | [optional] 
+**intramuralLocation** | **Boolean** |  | [optional] 
+**locationType** | **String** |  | [optional] 
+**capacity** | **Number** |  | [optional] [default to 0]
+**costCenter** | **String** |  | [optional] 
+**roomType** | **String** |  | [optional] 
+**parentObjectId** | **Number** | location objectid of the parent where this location belongs to | [optional] 
+**icon** | **Number** |  | [optional] [default to 0]
+**medicineAllowed** | **Boolean** | Indication whether this location can be used as a medication location | [optional] 
+**ggzAllowed** | **Boolean** | Indication whether this location can be used as a mental healthcare residence location | [optional] 
+**waitingListAllowed** | **Boolean** | Indication whether this location can be used as a waiting list | [optional] 
+**registeredLocationNumber** | **String** | The location as registered for Wzd / Wvggz purposes | [optional] 
+**correspondenceName** | **String** | Correspondence name for use in mail correspondence when location name is not fit for mail correspondence (e.g. &#x27;K PS fys 03&#x27;). Default correspondence name is the location name, unless set otherwise | [optional] 
+**hideCorrespondenceName** | **Boolean** | Whether the correspondence name should be hidden | [optional] 
+**addressObjectId** | **Number** |  | [optional] 
+**createdAt** | **Date** |  | [optional] 
+**updatedAt** | **Date** |  | [optional] 

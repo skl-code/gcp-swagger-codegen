@@ -1,0 +1,32 @@
+# NedapOnsApi.User
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** |  | [optional] 
+**uuid** | **String** |  | [optional] 
+**userName** | **String** |  | [optional] 
+**activeSession** | **Boolean** |  | [optional] 
+**employeeObjectId** | **Number** |  | [optional] 
+**employeeName** | **String** |  | [optional] 
+**teamObjectId** | **Number** | read only, corresponds with the team.id of the active team for the employee related to this user | [optional] 
+**teamName** | **String** |  | [optional] 
+**mobilePhone** | **String** | read only, corresponds with employee.mobilePhoneNumber | [optional] 
+**mobilePhoneNumber** | **String** | read only, corresponds with employee.authenticationMobilePhone | [optional] 
+**passwordChange** | **Boolean** |  | [optional] 
+**emailAddress** | **String** | Deprecated since: 14-03-2019 | [optional] 
+**administrationEnabled** | **Boolean** | Deprecated since: 14-03-2019 - Replaced by the &#x60;AdministrationLogin&#x60; right. Determines if a user can log into Administration. | [optional] 
+**portalEnabled** | **Boolean** | Deprecated since: 14-03-2019 - Replaced by the &#x60;EmployeePortalLogin&#x60; right. Determines if a user can log into the Nurse Portal. | [optional] 
+**accessTestEnvironmentEnabled** | **Boolean** | Deprecated since: 14-03-2019 - Replaced by the &#x60;AdministrationTestLogin&#x60; right. Determines if a user can log into development / staging environments | [optional] 
+**shieldEnabled** | **Boolean** | Deprecated since: 11-11-2019 - Shield is now always enabled. | [optional] 
+**ssoEnabled** | **Boolean** |  | [optional] 
+**ssoId** | **String** |  | [optional] 
+**ssoProviderId** | **String** |  | [optional] 
+**forceSmsAuthentication** | **Boolean** |  | [optional] 
+**roles** | [**[Role]**](Role.md) | Deprecated since: 14-03-2019 Do not use. Shield will not support it. See https://github.com/nedap/shield/issues/3207#issuecomment-635947346 | [optional] 
+**allLocationsViewable** | **Boolean** | Deprecated since: 14-03-2019 Do not use. Shield will not support it. See https://github.com/nedap/shield/issues/3207#issuecomment-635947346 | [optional] 
+**limitLocationView** | **Boolean** | Deprecated since: 14-03-2019 Do not use. Shield will not support it. See https://github.com/nedap/shield/issues/3207#issuecomment-635947346 | [optional] 
+**teamAccess** | **String** | Deprecated since: 14-03-2019 Do not use. Shield will not support it. See https://github.com/nedap/shield/issues/3207#issuecomment-635947346 | [optional] 
+**locationAccess** | **String** | Deprecated since: 14-03-2019 Do not use. Shield will not support it. See https://github.com/nedap/shield/issues/3207#issuecomment-635947346 | [optional] 
+**contractRequiredAtLogin** | **Boolean** | Indicates if the user should have an active contract during login (if this functionality is enabled) | [optional] [default to false]
+**dashboardProfileObjectId** | **Number** | Object id of the dashboard profile to use for this User. If not set when creating a user, the default dashboard profile is used. | [optional] 

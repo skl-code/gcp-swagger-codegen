@@ -1,0 +1,37 @@
+# NedapOnsApi.DbcGgzSubtraject
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** | Object identifier | [optional] 
+**externalId** | **Number** | References Administration&#x27;s CareOrderProduct | [optional] 
+**externalProductToewijzingId** | **Number** | References beschikking (assigned CareOrderProduct) | [optional] 
+**zorgtraject** | [**DbcGgzZorgtraject**](DbcGgzZorgtraject.md) |  | [optional] 
+**identificatienummer** | **String** | Optional user-supplied reference id for this DBC by default, an automatically generated unused Long as string | [optional] 
+**openingsdatum** | **Date** | Start date of this DBC | 
+**sluitdatum** | **Date** | End date of this DBC. If null, this DBC is &#x27;open&#x27;. If non-null, this DBC is &#x27;closed&#x27;. | [optional] 
+**redenSluiten** | [**DbcGgzRedenSluiten**](DbcGgzRedenSluiten.md) |  | [optional] 
+**zorgtype** | [**DbcGgzZorgtype**](DbcGgzZorgtype.md) |  | [optional] 
+**regiebehandelaar** | **String** | use regiebehandelaar_id | [optional] 
+**regiebehandelaarId** | **Number** | Object identifier of Employee which is the regiebehandelaar | [optional] 
+**medebehandelaar** | **String** | use medebehandelaar_id | [optional] 
+**medebehandelaarId** | **Number** | Object identifier of Employee which is the tweede regiebehandelaar | [optional] 
+**circuitcode** | [**DbcGgzCircuit**](DbcGgzCircuit.md) |  | [optional] 
+**soortVerwijzer** | [**DbcGgzSoortVerwijzer**](DbcGgzSoortVerwijzer.md) |  | [optional] 
+**verwijzerAgb** | **String** | The AGB code of the referrer for the client. | [optional] 
+**debiteurType** | **String** | Debtor type for this subtraject possible values: - &#x27;CLIENT&#x27;, indicating a manually invoiced DBC - &#x27;ZORGVERZEKERAAR&#x27;, indicating an automatically invoiced DBC - &#x27;CUSTOM&#x27;, indicating a custom Debtor can be set (&#x60;customDebtor&#x60;) | [default to &#x27;ZORGVERZEKERAAR&#x27;]
+**customDebtorId** | **Number** | Object identifier of Administration&#x27;s Debtor that can be set as a custom debtor Should only be set when &#x60;debiteurType&#x60; equals &#x60;CUSTOM&#x60; | [optional] 
+**tijdschrijvenRegistraties** | [**[DbcGgzTijdschrijven]**](DbcGgzTijdschrijven.md) | List of administrative time registrations | [optional] 
+**dagbestedingRegistraties** | [**[DbcGgzDagbesteding]**](DbcGgzDagbesteding.md) | List of day care activity registrations | [optional] 
+**verblijfsdagRegistraties** | [**[DbcGgzVerblijfsdag]**](DbcGgzVerblijfsdag.md) | List of residencies | [optional] 
+**verrichtingRegistraties** | [**[DbcGgzVerrichting]**](DbcGgzVerrichting.md) | List of treatments | [optional] 
+**nevenDiagnosen** | [**[DbcGgzDiagnoseToekenning]**](DbcGgzDiagnoseToekenning.md) | List of evaluative diagnoses | [optional] 
+**grouperResultaten** | [**[DbcGgzGrouperGrouperResultaat]**](DbcGgzGrouperGrouperResultaat.md) | List of derived declarable products based on registered time | [optional] 
+**excludeInvoicing** | **Boolean** | When true: do not create invoices / declarations for this Subtraject | [optional] [default to false]
+**latestGrouperResultaat** | [**DbcGgzGrouperGrouperResultaat**](DbcGgzGrouperGrouperResultaat.md) |  | [optional] 
+**numberOfDirectMinutes** | **Number** | The number of direct registered minutes | [optional] 
+**numberOfIndirectMinutes** | **Number** | The number of direct registered minutes | [optional] 
+**numberOfTravelMinutes** | **Number** | The number of direct registered minutes | [optional] 
+**lastRegistrationDate** | **Date** | The last registration date. Null if there are no registrations. | [optional] 
+**excludeInvoicingReason** | **String** | When excludeInvoicing is true: this string contains the reason why in free text | [optional] 
+**invoiced** | **Boolean** | Value that tracks if the subtraject has been invoiced | [optional] 

@@ -1,0 +1,33 @@
+# NedapOnsApi.PresenceLog
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** |  | [optional] 
+**activityObjectId** | **Number** | The id of the {@link HourType} that is assigned to this {@code PresenceLog}. The value of this field is a bit complicated, and depends on the contents of the {@code products} field. The following rules are used, from top to bottom:  If there is exactly one PresenceLogProduct with a duration, the hour type id of that PresenceLogProduct is used If there are multiple PresenceLogProducts with a duration, 12 is used, which means &#x27;client time&#x27; If there are no PresenceLogProducts with a duration, but exactly one with a quantity, the hour type id of that PresenceLogProduct is used If there are no PresenceLogProducts with a duration, and multiple with a quantity, or no products, no value is set | [optional] 
+**duration** | **Number** | The duration of this PresenceLog. This value is only set for PresenceLogs for which the start- and endtime don&#x27;t matter; so called &#x27;duration presence logs&#x27;. These are usually created from for example the week sheet. This value is only set if hasRealTime is false. | [optional] 
+**reason** | **String** | The user-provided reason this PresenceLog was created or modified, if available. | [optional] 
+**action** | [**PresenceLogAction**](PresenceLogAction.md) |  | [optional] 
+**externalId** | **String** | The id of the PresenceLog in the source application of the PresenceLog. | [optional] 
+**sourceType** | **String** | 2: MobilePhone 3: Manual 4: Timesheet 5: APriori 6: Planning 7: EmployeePortal 8: Groupcare 9: Schedule 10: Import 11: ImportWithOverlap 12: Agenda 13: NewGroupCare 14: YsisConnector 15: OnsDBC 16: OnsVandaag 17: OnsDossier | [optional] 
+**clientObjectId** | **Number** | The id of the Client related to this PresenceLog. | [optional] 
+**employeeObjectId** | **Number** | The id of the Employee related to this PresenceLog. | [optional] 
+**careOrderObjectId** | **Number** | The id of the CareOrder related to this PresenceLog. Only set for treatment-related PresenceLogs, such as those relating to Primary Care. | [optional] 
+**_date** | **Date** | Date of registration. Only use this for indirect presencelogs, which are not bound to a client. When date is not set, a fallback to startDate will be used. | [optional] 
+**startDate** | **Date** |  | [optional] 
+**endDate** | **Date** |  | [optional] 
+**clusterObjectId** | **Number** | The id of the Team used for cost center computation. | [optional] 
+**registration** | **Boolean** | Indicates if this is a client-related registration. | [optional] 
+**payment** | **Boolean** | Indicates if this PresenceLog is considered for payrolling. Only if both payment and payrollingActivity are true, the presence log is actually considered for payrolling. | [optional] 
+**fixedRateCompensation** | **Boolean** | Indicates if this PresenceLog is compensated with a fixed rate. If true, it is not displayed as work time. | [optional] 
+**payrollingActivity** | **Boolean** | Indicates if the Activity or Activities attached to this presence log are considered for payrolling. This property is read-only. Only if both payment and payrollingActivity are true, the presence log is actually considered for payrolling. | [optional] 
+**removed** | **Boolean** | Indicates if this PresenceLog is removed. | [optional] 
+**verified** | **Boolean** | Indicates if this PresenceLog is verified. | [optional] 
+**dossierReportUuid** | **String** | UUID of the related Dossier report. | [optional] 
+**hasRealTime** | **Boolean** | Indicates if this PresenceLog represents a real period with a start and end, or simply a duration (e.g. 6 hours). If this is set to true, the duration field should be ignored, if it is false the duration field should have a correct value. | [optional] 
+**calculatedWorktimeAmount** | **Number** | This field contains the actual work time. This can be different if the registration is an availability shift (bereikbaarheidsdienst) for example. Or if the registration is part of a group appointment. Thus, the full time is not should be split over several registrations. | [optional] 
+**presenceLogLocation** | [**PresenceLogLocation**](PresenceLogLocation.md) |  | [optional] 
+**products** | [**[PresenceLogProduct]**](PresenceLogProduct.md) |  | [optional] 
+**ortHours** | [**[PresenceLogORT]**](PresenceLogORT.md) |  | [optional] 
+**presenceLogPermission** | [**PresenceLogPermission**](PresenceLogPermission.md) |  | [optional] 
+**uuid** | **String** | This field contains the uuid of a registration to all related presencelogs. An example usage could be a group appointment. All presencelogs from a group appointment will have the same uuid. | [optional] 
